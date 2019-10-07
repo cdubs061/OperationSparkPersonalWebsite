@@ -35,9 +35,14 @@
         platform.create(0, game.world.height - 32, 3, 2);
 
         // example:
-        platform.create(400, 460);
-        platform.create(500, 200);
-        
+        platform.create(550, 590, 1, 3);
+        platform.create(450, 200, 2, 1);
+        platform.create(500, 250);
+        platform.create(150, 525, .5, 1);
+        platform.create(120, 300, .1, 8);
+        platform.create(425, 450, 3, 1);
+        platform.create(800, 400, .5, 1);
+        platform.create(800, 350, .5, 1);
         
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
