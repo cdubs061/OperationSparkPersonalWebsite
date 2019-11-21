@@ -1,4 +1,4 @@
-cd /projects
+_cd /projects
 mv $1.github.io backup
 git clone https://github.com/$1/$1.github.io
 cp -r backup/* $1.github.io
