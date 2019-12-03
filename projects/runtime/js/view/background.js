@@ -27,7 +27,7 @@ var background = function (window) {
         
         // ANIMATION VARIABLES HERE:
         var tree;
-     
+        var buildings = [];   
         // called at the start of game and whenever the page is resized
         // add objects for display in background. draws each image added to the background once
         function render() {
@@ -56,7 +56,7 @@ var background = function (window) {
             background.addChild(moon);
             
             // TODO: 5 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
-            var buildings = []
+
             for(var i=0;i<5;++i) {
                 var buildingHeight = 300;
                 var building = draw.rect(75,buildingHeight,'LightGray','Black',1);
@@ -89,12 +89,16 @@ var background = function (window) {
                 tree.x = canvasWidth;
             }
             // TODO 5: Part 2 - Parallax
-            buildings.x = buildings.x - 1;
-            if(buildings.x < -100) {
-                buildings.x = canvasWidth;
+            for (var i = 0; i <= buildings.length; i++)
+                var building = buildings[i];
+                building.x = building.x - 0.5;
+                if(building.x < -100) {
+                building.x = canvasWidth;
             }
 
-        } // end of update function - DO NOT DELETE
+            }
+
+        }; // end of update function - DO NOT DELETE
         
         
         
